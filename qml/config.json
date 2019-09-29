@@ -4,5 +4,13 @@
     "orientation": "portrait",
     "versioncode": 1,
     "versionname": "1.0",
-    "stage": "test"
+    "stage": "test",
+    "author": "FriendlyUser",
+    "plugins": [ "flurry", "facebook" ],
+
+    "ios": {
+      "prerendered_icon": true,
+      "filesharing_enabled": false,
+      "url_schemes": [ "fb624554907601397" ]
+    }
 }
