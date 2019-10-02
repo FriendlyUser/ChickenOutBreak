@@ -144,7 +144,7 @@ SceneBase {
       anchors.fill: parent
       onClicked: {
         vplayLinkShown = true
-        flurry.logEvent("MainScene.ShowDialog.VPlayWeb")
+        // flurry.logEvent("MainScene.ShowDialog.VPlayWeb")
         nativeUtils.displayMessageBox(qsTr("Felgo"), qsTr("This game is built with Felgo. The source code is available in the free Felgo SDK - so you can build your own Chicken Outbreak in minutes! Visit Felgo.net now?"), 2)
       }
     }
