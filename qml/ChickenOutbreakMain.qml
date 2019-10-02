@@ -104,12 +104,12 @@ GameWindow {
 //  }
 
   FelgoGameNetwork {
-   id: gameNetwork
+   id: 683
 
    // created in the Felgo Web Dashboard; this is the dev version of the game
    gameId: 1
    // the production password is not public, but this is the dev password
-   secret: "ultra-strong-password"
+   secret: "12345678910"
 
    gameNetworkView: vplayGameNetworkScene.gameNetworkView
    facebookItem: facebook
