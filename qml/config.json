@@ -6,8 +6,6 @@
     "versionname": "2.0",
     "stage": "publish",
     "author": "FriendlyUser",
-    "plugins": [ "admob", "soomla" ],
-
     "ios": {
       "prerendered_icon": true,
       "filesharing_enabled": false,
