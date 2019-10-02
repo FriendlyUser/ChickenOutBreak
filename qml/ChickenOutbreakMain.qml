@@ -104,13 +104,14 @@ GameWindow {
 //  }
 
   FelgoGameNetwork {
+   id: gameNetwork
    // created in the Felgo Web Dashboard; this is the dev version of the game
    gameId: 683
    // the production password is not public, but this is the dev password
    secret: "12345678910"
 
    gameNetworkView: vplayGameNetworkScene.gameNetworkView
-   facebookItem: facebook
+   // facebookItem: facebook
 //   gameCenterItem: gameCenter
 
    achievements: [
@@ -187,42 +188,9 @@ GameWindow {
      }
    }
 
-   // facebook signal and property handling:
-   onFacebookSuccessfullyConnected: {
-     nativeUtils.displayMessageBox(qsTr("Facebook Connected"), qsTr("You just successfully connected to facebook, congrats!"))
-   }
-   onFacebookSuccessfullyDisconnected: {
-     nativeUtils.displayMessageBox(qsTr("Facebook Disconnected"), qsTr("You just successfully disconnected from facebook..."))
-   }
-   onFacebookConnectionError: {
-     // also show this in publish builds, useful for finding the issue if customer requests are sent
-     nativeUtils.displayMessageBox(qsTr("Facebook Error"), JSON.stringify(error))
-   }
-
 
   }// FelgoGameNetwork
 
-
-  Facebook {
-    // the user will automatically connect with facebook, once "connect" is pressed in the UserTest
-    id: facebook
-
-    // this is the dev version of the fb app, "Chicken Outbreak Dev"
-    appId: "624554907601397"
-
-    readPermissions: ["email", "read_friendlists"]
-    publishPermissions: ["publish_actions"]
-
-  }
-
-
-
-  // Flurry is only available on iOS and Android
-  Flurry {
-    id: flurry
-    // this is the app key for the ChickenOutbreak-SDK-Demo, be sure to get one for your own application if you want to use Flurry
-    apiKey: "9PH383W92BYDK6ZYVSDV"
-  }
 
 
   // this scene is set to visible when loaded initially, so its opacity value gets set to 1 in a PropertyChange below
@@ -282,34 +250,34 @@ GameWindow {
       activeScene = vplayGameNetworkScene;
 
     if(lastActiveState === "main") {
-      flurry.endTimedEvent("Display.Main");
+      // flurry.endTimedEvent("Display.Main");
     } else if(lastActiveState === "game") {
-      flurry.endTimedEvent("Display.Game");
+      // flurry.endTimedEvent("Display.Game");
 
       // NOTE: Android doesn't support endTimedEventWithParams yet!?! http://stackoverflow.com/questions/12205860/android-flurry-and-endtimedevent
       //flurry.endTimedEvent("Display.Game", { "score": lastScore, "collectedCorns" : player.bonusScore, "scoreForCorns": player.bonusScore*player.bonusScoreForCoin });
       // thus emit them with own events
 
-      flurry.logEvent("Game.Finished", { "score": lastScore, "collectedCorns" : player.bonusScore, "scoreForCorns": player.bonusScore*player.bonusScoreForCoin })
+      // flurry.logEvent("Game.Finished", { "score": lastScore, "collectedCorns" : player.bonusScore, "scoreForCorns": player.bonusScore*player.bonusScoreForCoin })
 
     } else if(lastActiveState === "gameOver") {
-      flurry.endTimedEvent("Display.GameOver");
+      // flurry.endTimedEvent("Display.GameOver");
     } else if(lastActiveState === "credits") {
-      flurry.endTimedEvent("Display.Credits");
+      // flurry.endTimedEvent("Display.Credits");
     } else if(lastActiveState === "gameNetwork") {
-        flurry.endTimedEvent("Display.FelgoGameNetwork");
+        // flurry.endTimedEvent("Display.FelgoGameNetwork");
     }
 
     if(state === "main") {
-      flurry.logTimedEvent("Display.Main");
+      // flurry.logTimedEvent("Display.Main");
     } else if(state === "game") {
-      flurry.logTimedEvent("Display.Game");
+      // flurry.logTimedEvent("Display.Game");
     } else if(state === "gameOver") {
-      flurry.logTimedEvent("Display.GameOver");
+      // flurry.logTimedEvent("Display.GameOver");
     } else if(state === "credits") {
-      flurry.logTimedEvent("Display.Credits");
+      // flurry.logTimedEvent("Display.Credits");
     } else if(state === "gameNetwork") {
-      flurry.logTimedEvent("Display.FelgoGameNetwork");
+      // flurry.logTimedEvent("Display.FelgoGameNetwork");
     }
 
     lastActiveState = state;

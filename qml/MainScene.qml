@@ -23,7 +23,7 @@ SceneBase {
         if(accepted && exitDialogShown) {
           Qt.quit()
         } else if(accepted && vplayLinkShown) {
-          flurry.logEvent("MainScene.Show.VPlayWeb")
+          // flurry.logEvent("MainScene.Show.VPlayWeb")
           nativeUtils.openUrl("https://felgo.com/showcases/?utm_medium=game&utm_source=chickenoutbreak&utm_campaign=chickenoutbreak#chicken_outbreak");
         }
 

@@ -3,7 +3,7 @@
     "identifier": "com.yourcompany.wizardEVP.WidgetWalk",
     "orientation": "portrait",
     "versioncode": 2,
-    "versionname": "2.0",
+    "versionname": "2.0.0",
     "stage": "publish",
     "author": "FriendlyUser",
     "ios": {
