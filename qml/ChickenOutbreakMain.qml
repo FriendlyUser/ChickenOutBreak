@@ -211,6 +211,12 @@ GameWindow {
     id: gameOverScene
     // when opacity is 0, visible gets set to false in SceneBase
     opacity: 0
+    AdMobBanner {
+      adUnitId: "ca-app-pub-2479144310234386~6519698786" // banner test ad by AdMob
+      banner: AdMobBanner.Smart
+      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.top: parent.top
+    }
   }
 
   CreditsScene {

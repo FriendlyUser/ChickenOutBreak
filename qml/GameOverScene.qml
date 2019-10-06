@@ -12,6 +12,12 @@ SceneBase {
   Keys.onReturnPressed: {
     window.state = "main"
   }
+  AdMobBanner {
+    adUnitId: "ca-app-pub-2479144310234386~6519698786" // banner test ad by AdMob
+    banner: AdMobBanner.Smart
+    anchors.horizontalCenter: parent.horizontalCenter
+    anchors.top: parent.top
+  }
 
   // 3 different formats of the image are provided (-sd, -hd and -hd2)
   BackgroundImage {

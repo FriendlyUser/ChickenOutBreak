@@ -49,16 +49,16 @@ EntityBase {
 
   Image {
     id: sprite
-    source: "../../assets/img/chicken-front.png"
+    source: "../../assets/img/avatar/alienYellow_front.png"
     anchors.centerIn: parent
 
-    width: 20
-    height: 20
+    width: 25
+    height: 25
     visible: false // will be visible in default state
   }
   Image {
     id: spriteMovement
-    source: "../../assets/img/chicken-left01.png"
+    source: "../../assets/img/avatar/alienYellow_walk2.png"
     anchors.centerIn: parent
     mirror: __isLookingRight
     width: sprite.width
@@ -67,10 +67,10 @@ EntityBase {
   }
   Image {
     id: spriteFlying
-    source: "../../assets/img/chicken-fly.png"
+    source: "../../assets/img/avatar/alienYellow_jump.png"
     anchors.centerIn: parent
     width: 25
-    height: 20
+    height: 25
     visible: false
   }
 
