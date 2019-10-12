@@ -14,7 +14,7 @@ SceneBase {
   }
 
   MultiResolutionImage {
-    source: "../assets/img/mainMenuBackground.png"
+    source: "../assets/img/flyingSky.png"
     anchors.centerIn: parent
   }
 
@@ -30,14 +30,6 @@ SceneBase {
     Item {
       width: 1
       height: 35
-    }
-
-    MenuText {
-      text: qsTr("Art:")
-    }
-
-    MenuText {
-      text: "Astrid Handlechner"
     }
 
     Item {

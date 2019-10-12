@@ -15,7 +15,7 @@ EntityBase {
 
   Image {
     id: sprite
-    source: "../../assets/img/roost_higher.png"
+    source: "../../assets/img/brickGrey.png"
 
     width: level.gridSize
     height: 8

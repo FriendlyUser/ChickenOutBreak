@@ -78,7 +78,7 @@ SceneBase {
 
   // input graphics - the handling of the input is done below in the MouseArea
   Image {
-    source: "../assets/img/arrow-left.png"
+    source: "../assets/img/triLeft.png"
     opacity: 0.5
     width: 48
     height: 48
@@ -90,7 +90,7 @@ SceneBase {
     }
   }
   Image {
-    source: "../assets/img/arrow-left.png"
+    source: "../assets/img/triLeft.png"
     opacity: 0.5
     width: 48
     height: 48

@@ -45,8 +45,8 @@ SceneBase {
     y: 5
 
     MenuText {
-      text: qsTr("Chicken Outbreak")
-      font.pixelSize: 35
+      text: qsTr("Boy Drop")
+      font.pixelSize: 38
     }
 
     MenuText {

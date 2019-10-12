@@ -12,9 +12,9 @@ EntityBase {
 
   Image {
     id: sprite
-    source: "../../assets/img/corn.png"
+    source: "../../assets/img/coinGold.png"
 
-    width: 7
+    width: 10
     height: 10
 
     anchors.centerIn: parent

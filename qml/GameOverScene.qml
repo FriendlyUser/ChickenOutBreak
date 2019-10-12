@@ -21,16 +21,16 @@ SceneBase {
 
   // 3 different formats of the image are provided (-sd, -hd and -hd2)
   BackgroundImage {
-    source: "../assets/img/gameOverScreen.png"
+    source: "../assets/img/GameOverScreenMe.png"
     anchors.centerIn: parent
   }
 
   Image {
     // position manually so it is in the center of the egg
-    x: 40
-    y: 120
-    scale: 0.3
-    source: "../assets/img/chicken-dead01.png"
+    x: 90
+    y: 140
+    scale: 0.7
+    source: "../assets/img/avatar/alienYellow_hit.png"
   }
 
 
