@@ -35,7 +35,7 @@ SceneBase {
   }
 
   MultiResolutionImage {
-    source: "../assets/img/mainMenuBackground.png"
+    source: "../assets/img/flyingSky.png"
     anchors.centerIn: parent
   }
 
@@ -128,7 +128,7 @@ SceneBase {
     }
   }
 
-  Image {
+/*   Image {
    id: logo
     anchors.right: mainScene.gameWindowAnchorItem.right
     anchors.rightMargin: 10
@@ -155,7 +155,7 @@ SceneBase {
       NumberAnimation { target: logo; property: "opacity"; to: 0.1; duration: 1200 }
       NumberAnimation { target: logo; property: "opacity"; to: 1; duration: 1200 }
     }
-  }
+  } */
 
   // this allows navigation through key presses
   Keys.onReturnPressed: {

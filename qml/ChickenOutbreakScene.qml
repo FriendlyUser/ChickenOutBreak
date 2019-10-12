@@ -51,7 +51,7 @@ SceneBase {
 //    y: initialOffsety-level.y
     anchors.horizontalCenter: parent.horizontalCenter
     y: parent.height-parent.gameWindowAnchorItem.height
-    sourceImage: "../assets/img/background-wood2.png"
+    sourceImage: "../assets/img/flyingSky.png"
     // do not mirror it vertically, because the image is prepared to match on the top and the bottom
     mirrorSecondImage: false
     movementVelocity: Qt.point(0, level.levelMovementAnimation.velocity)
